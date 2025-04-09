@@ -17,7 +17,7 @@ def minus(a: int, b: int) -> int:
     return a + b
 
 
-@mcp.tool()
+@mcp.tool(name="네이버쇼핑 검색", description="Search shopping items on Naver")
 def search_shop(
         query: str,
         display: int = 10,
@@ -27,8 +27,6 @@ def search_shop(
         exclude: str = None,
 ):
     """
-    Search shopping items on Naver
-
     Args:
         query (str): The query to search for.
         display (int, optional): The number of items to display. Defaults to 10.
@@ -50,7 +48,7 @@ def search_shop(
             },
             headers=api_headers,
         )
-        print(sort)
+        #print(sort)
         response.raise_for_status()  # Raise an error for bad responses
 
         return response.text
