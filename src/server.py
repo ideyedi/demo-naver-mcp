@@ -10,14 +10,7 @@ api_headers = {
 }
 API_ENDPOINT = "https://openapi.naver.com/v1"
 
-
 @mcp.tool()
-def minus(a: int, b: int) -> int:
-    """Add two numbers"""
-    return a + b
-
-
-@mcp.tool(name="네이버쇼핑 검색", description="Search shopping items on Naver")
 def search_shop(
         query: str,
         display: int = 10,
@@ -31,7 +24,7 @@ def search_shop(
         query (str): The query to search for.
         display (int, optional): The number of items to display. Defaults to 10.
         start (int, optional): The start index for the search. Defaults to 1.
-        sort (str, optional): The sorting method. Defaults to "sim".
+        sort (str, optional): The sorting method. Defaults to "sim". ordering price 'asc' or 'desc'.
         filter (str, optional): The filter for the search. Defaults to None.
         exclude (str, optional): The exclude filter for the search. Defaults to None.
     """
