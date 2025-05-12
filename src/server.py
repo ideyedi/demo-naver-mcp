@@ -5,8 +5,8 @@ import httpx
 mcp = FastMCP("ideyedi mcp demo", "0.1.0")
 
 api_headers = {
-    "X-Naver-Client-Id": "gq696efE6pfkVAv7kVOF",
-    "X-Naver-Client-Secret": "O8jeleExQd",
+    "X-Naver-Client-Id": "tC6AsI_LiWnCRfxPHSdl",
+    "X-Naver-Client-Secret": "4hvvWQpPeV",
 }
 API_ENDPOINT = "https://openapi.naver.com/v1"
 
