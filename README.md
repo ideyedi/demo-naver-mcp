@@ -40,16 +40,13 @@
 ## Claude Desktop에서 사용하기
 
 ```json
-"shoppingServers": {
-  "naver": {
-    "command": "uv",
-    "args": [
-      "--directory",
-      "parent_of_servers_repo/servers/src/naver",
-      "run",
-      "shopping-search-server",
-      "--api-mode",
-      "scrape"
-    ]
-  }
+{
+  "mcpServers": {
+    "mcp shop": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm", "shop-mcp-server"
+      ]
+    }
+  } 
 }
