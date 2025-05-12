@@ -5,17 +5,10 @@ import httpx
 mcp = FastMCP("ideyedi mcp demo", "0.1.0")
 
 api_headers = {
-    "X-Naver-Client-Id": "gq696efE6pfkVAv7kVOF",
-    "X-Naver-Client-Secret": "O8jeleExQd",
+    "X-Naver-Client-Id": "tC6AsI_LiWnCRfxPHSdl",
+    "X-Naver-Client-Secret": "4hvvWQpPeV",
 }
 API_ENDPOINT = "https://openapi.naver.com/v1"
-
-
-@mcp.tool()
-def minus(a: int, b: int) -> int:
-    """Add two numbers"""
-    return a + b
-
 
 @mcp.tool()
 def search_shop(
@@ -27,13 +20,11 @@ def search_shop(
         exclude: str = None,
 ):
     """
-    Search shopping items on Naver
-
     Args:
         query (str): The query to search for.
         display (int, optional): The number of items to display. Defaults to 10.
         start (int, optional): The start index for the search. Defaults to 1.
-        sort (str, optional): The sorting method. Defaults to "sim".
+        sort (str, optional): The sorting method. Defaults to "sim". ordering price 'asc' or 'desc'.
         filter (str, optional): The filter for the search. Defaults to None.
         exclude (str, optional): The exclude filter for the search. Defaults to None.
     """
@@ -50,7 +41,7 @@ def search_shop(
             },
             headers=api_headers,
         )
-        print(sort)
+        #print(sort)
         response.raise_for_status()  # Raise an error for bad responses
 
         return response.text
